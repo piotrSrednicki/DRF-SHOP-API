@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'clientSeller'
+    'clientSeller',
+    'django_filters'
 ]
 
 MIDDLEWARE = [
@@ -52,6 +53,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'djangoRestFrameworkAPI.urls'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 TEMPLATES = [
     {
@@ -72,6 +75,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'djangoRestFrameworkAPI.wsgi.application'
 
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+    ),
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
